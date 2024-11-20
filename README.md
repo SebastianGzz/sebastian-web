@@ -1,27 +1,67 @@
-# SebastianWeb
+# Sebastián González - Portafolio Web 🌐
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.10.
+Bienvenido al repositorio de mi portafolio web personal. Aquí podrás encontrar el código fuente de mi sitio, donde presento mis habilidades, proyectos y experiencia como desarrollador web y móvil. 🚀
 
-## Development server
+## ✨ Características
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Diseño Responsivo**: Compatible con dispositivos móviles, tabletas y computadoras de escritorio.
+- **Proyectos Destacados**: Una sección donde muestro mis proyectos más importantes.
+- **Acerca de Mí**: Información sobre mi trayectoria profesional y habilidades.
+- **Contacto**: Formulario para que puedas comunicarte conmigo fácilmente.
 
-## Code scaffolding
+## 🛠️ Tecnologías Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Frontend**:
+  - [Angular](https://angular.io/) como framework.
+  - [Tailwind CSS](https://tailwindcss.com/) para el diseño.
+- **Herramientas de desarrollo**:
+  - [WebStorm](https://www.jetbrains.com/webstorm/) como IDE.
 
-## Build
+## 🚀 Despliegue
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+El portafolio está disponible en: [https://tu-dominio.com](https://tu-dominio.com).
 
-## Running unit tests
+## 📂 Estructura del Proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```plaintext
+.
+├── src/               # Archivos fuente
+│   ├── assets/        # Imágenes, íconos, etc.
+│   ├── components/    # Componentes reutilizables
+│   ├── pages/         # Páginas principales del sitio
+│   └── styles/        # Archivos de estilos
+├── public/            # Archivos estáticos
+├── README.md          # Archivo de documentación
+└── package.json       # Dependencias y scripts
+```
 
-## Running end-to-end tests
+## 🧑‍💻 Instalación y Uso
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
+   cd tu-repositorio
+   ```
 
-## Further help
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm start
+   ```
+
+4. Abre tu navegador en:
+   ```
+   http://localhost:3000
+   ```
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Puedes consultar el archivo [LICENSE](./LICENSE) para más información.
+
+---
+
+¡Espero que lo encuentres útil! Puedes personalizarlo según las necesidades de tu proyecto.
