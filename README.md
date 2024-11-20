@@ -38,30 +38,29 @@ El portafolio está disponible en: [https://tu-dominio.com](https://tu-dominio.c
 ## 🧑‍💻 Instalación y Uso
 
 1. Clona este repositorio:
+
    ```bash
    git clone https://github.com/tu-usuario/tu-repositorio.git
    cd tu-repositorio
    ```
 
 2. Instala las dependencias:
+
    ```bash
    npm install
    ```
 
 3. Inicia el servidor de desarrollo:
+
    ```bash
-   npm start
+    ng serve
    ```
 
 4. Abre tu navegador en:
    ```
-   http://localhost:3000
+   http://localhost:4200
    ```
 
 ## 📝 Licencia
 
 Este proyecto está bajo la Licencia MIT. Puedes consultar el archivo [LICENSE](./LICENSE) para más información.
-
----
-
-¡Espero que lo encuentres útil! Puedes personalizarlo según las necesidades de tu proyecto.

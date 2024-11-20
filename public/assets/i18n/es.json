@@ -1,0 +1,11 @@
+{
+  "HEADER": {
+    "TITLE": "Sebastian",
+    "DESCRIPTION": "Ingeniero de Software",
+    "NAVLINKS": {
+      "HOME": "Inicio",
+      "PROJECTS": "Proyectos",
+      "CONTACTME": "Contactame"
+    }
+  }
+}
