@@ -6,7 +6,7 @@
   </button>
 
   <div class="flex items-center justify-center px-4">
-    <h1 class="text-app-900 font-bold">Sebastian</h1>
+    <h1 class="text-app-900 font-bold uppercase text-sm">Sebastian</h1>
   </div>
 
   <div class="flex-grow">
@@ -38,7 +38,7 @@
     routerLink="/contact"
     class="bg-app-900 flex h-14 items-center justify-center gap-1 px-5 text-white"
   >
-    <span>{{ 'HEADER.NAVLINKS.CONTACTME' | translate }}</span>
+    <span class="uppercase text-sm">{{ 'HEADER.NAVLINKS.CONTACTME' | translate }}</span>
     <lucide-angular [img]="Icons.ArrowUpRight" class="my-icon"></lucide-angular>
   </a>
 </header>
