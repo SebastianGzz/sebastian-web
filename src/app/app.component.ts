@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TranslationService } from './core/services/translation.service';
 import { TranslatePipe } from './core/pipes/translate.pipe';
 
 @Component({
@@ -10,10 +9,4 @@ import { TranslatePipe } from './core/pipes/translate.pipe';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  constructor(private translationService: TranslationService) {}
-
-  changeLanguage(lang: string): void {
-    this.translationService.changeLanguage(lang);
-  }
-}
+export class AppComponent {}

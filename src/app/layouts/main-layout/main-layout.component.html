@@ -1,51 +1,90 @@
-<header class="border-app-500 flex border-b">
+<header class="flex border-b border-app-500">
   <button
-    class="bg-app-900 flex h-14 w-14 items-center justify-center text-white"
+    [cdkMenuTriggerFor]="navMenu"
+    class="flex h-14 w-14 items-center justify-center bg-app-900 text-white"
   >
     <lucide-angular [img]="Icons.Menu" class="my-icon"></lucide-angular>
   </button>
 
-  <div class="flex items-center justify-center px-4">
-    <h1 class="text-app-900 font-bold uppercase text-sm">Sebastian</h1>
-  </div>
+  <ng-template #navMenu>
+    <nav
+      cdkMenu
+      class="m-2 overflow-hidden rounded-lg border border-app-500 bg-app-200 shadow-lg"
+    >
+      @for (link of NAV_LINKS; track $index) {
+        <a
+          [routerLink]="link.url"
+          cdkMenuItem>
+          <div
+            matRipple
+            class="flex h-11 w-56 items-center justify-between px-4 hover:bg-app-400"
+          >
+            <span
+              class="font-bold uppercase text-app-600"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ link.ref | translate }}
+            </span>
 
-  <div class="flex-grow">
-    <nav class="hidden h-full items-center justify-center gap-4 md:flex">
-      <a
-        routerLink="/"
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="text-app-600 font-bold uppercase"
-      >
-        {{ 'HEADER.NAVLINKS.HOME' | translate }}
-      </a>
-      <a
-        routerLink="/projects"
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="text-app-600 font-bold uppercase"
-      >
-        {{ 'HEADER.NAVLINKS.PROJECTS' | translate }}
-      </a>
+            @if (link.icon) {
+              <lucide-angular [img]="link.icon" class="my-icon" />
+            }
+          </div>
+        </a>
+
+        @if ($index < NAV_LINKS.length - 1) {
+          <div class="border-t border-app-500"></div>
+        }
+      }
     </nav>
+  </ng-template>
+
+  <div class="flex flex-grow items-center px-4">
+    <h1 class="text-sm font-bold uppercase text-app-900">Sebastian</h1>
   </div>
 
-  <button class="bg-app-200 flex h-14 w-14 items-center justify-center">
+  <button
+    [cdkMenuTriggerFor]="langMenu"
+    class="flex h-14 w-14 items-center justify-center bg-app-200"
+  >
     <lucide-angular [img]="Icons.Languages" class="my-icon"></lucide-angular>
   </button>
 
+  <ng-template #langMenu>
+    <nav
+      cdkMenu
+      class="m-2 overflow-hidden rounded-lg border border-app-500 bg-app-200 shadow-lg"
+    >
+      @for (lang of LANGS; track $index) {
+        <button
+          matRipple
+          cdkMenuItem
+          (click)="changeLanguage(lang.code)"
+          class="flex h-11 w-36 items-center gap-4 px-4 hover:bg-app-400"
+        >
+          <img [src]="'/assets/icons/' + lang.icon" alt="">
+          <span class="font-bold uppercase text-app-600" [class.active]="currentLang() === lang.code">
+            {{ lang.name | translate }}
+          </span>
+        </button>
+
+        @if ($index < LANGS.length - 1) {
+          <div class="border-t border-app-500"></div>
+        }
+      }
+    </nav>
+  </ng-template>
+
   <a
     routerLink="/contact"
-    class="bg-app-900 flex h-14 items-center justify-center gap-1 px-5 text-white"
+    class="flex h-14 items-center justify-center gap-1 bg-app-900 px-5 text-white"
   >
-    <span class="uppercase text-sm">{{ 'HEADER.NAVLINKS.CONTACTME' | translate }}</span>
+    <span class="text-sm uppercase">{{
+        'HEADER.NAVLINKS.CONTACTME' | translate
+      }}</span>
     <lucide-angular [img]="Icons.ArrowUpRight" class="my-icon"></lucide-angular>
   </a>
 </header>
-
-<nav>
-  <a routerLink="/">Home</a>
-  <a routerLink="/projects">Projects</a>
-</nav>
 
 <router-outlet></router-outlet>
