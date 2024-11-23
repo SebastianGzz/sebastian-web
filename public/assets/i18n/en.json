@@ -7,7 +7,8 @@
     }
   },
   "UTILS": {
-    "BACK": "Back"
+    "BACK": "Back",
+    "OPENINNEWTAB": "Open in tab"
   },
   "HOME": {
     "TITLE": "Sebastian",
@@ -26,5 +27,8 @@
       "TITLE": "React - Ticketing application",
       "DESCRIPTION": "Developed a ticket purchasing system enabling the acquisition of tickets for exclusive events. To ensure security and transaction uniqueness, I implemented a system of unique identifiers. Additionally, I designed a tracking feature that effectively logged all tickets sold, providing detailed control and analysis of sales."
     }
+  },
+  "CONTACT": {
+    "TITLE": "Contact"
   }
 }

@@ -43,7 +43,11 @@ export class MainLayoutComponent {
       url: '/projects',
       icon: this.Icons.ArrowUpRight,
     },
-    { ref: 'HEADER.NAVLINKS.CONTACTME', url: '/contact', icon: null },
+    {
+      ref: 'HEADER.NAVLINKS.CONTACTME',
+      url: '/contact',
+      icon: this.Icons.ArrowUpRight,
+    },
   ];
 
   currentLang = signal('en');
