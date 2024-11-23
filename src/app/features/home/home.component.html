@@ -1,12 +1,12 @@
-<div
-  class="mx-auto max-w-7xl px-4 py-5"
->
-  <div class="flex h-full flex-col justify-between">
+<div class="mx-auto max-w-7xl px-4 py-5">
+  <section class="flex h-full flex-col justify-between">
     <div>
       <div class="w-full py-6">
         <div class="relative w-fit">
-          <h1 class="title inline-block truncate break-words font-black uppercase">
-            {{ 'HOME.TITLE' | translate }}
+          <h1
+            class="title inline-block truncate break-words font-black uppercase"
+          >
+            {{ 'HOME.S1.TITLE' | translate }}
           </h1>
 
           <div class="absolute -right-10 -top-5">
@@ -30,42 +30,53 @@
         <h2
           class="w-fit text-2xl font-semibold uppercase sm:text-3xl md:text-4xl"
         >
-          {{ 'HOME.SUBTITLE' | translate }}
+          {{ 'HOME.S1.SUBTITLE' | translate }}
         </h2>
 
-        <div class="flex mt-4">
+        <div class="mt-4 flex">
           @for (user of usuarios; track $index) {
             <div
               class="-mr-6 flex h-12 w-12 items-center justify-center rounded-full border-4 border-app-400 font-bold text-white"
-              [ngClass]="getColor($index)">
+              [ngClass]="getColor($index)"
+            >
               {{ user }}
             </div>
           }
 
           <div class="ml-6 flex gap-2">
-            <div class="w-12 h-12 flex items-center justify-center border-4 border-app-400 bg-app-900 rounded-full">
+            <div
+              class="flex h-12 w-12 items-center justify-center rounded-full border-4 border-app-400 bg-app-900"
+            >
               <lucide-angular [img]="Icons.Star" class="text-app-200" />
             </div>
 
             <div class="flex flex-col justify-center">
               <span class="font-bold leading-4">+200</span>
-              <span class="leading-4">{{ "HOME.SATISFIEDCLIENTS" | translate }}</span>
+              <span class="leading-4">
+                {{ 'HOME.S1.SATISFIEDCLIENTS' | translate }}
+              </span>
             </div>
           </div>
         </div>
 
-        <p class="text-sm mt-4">Many clients are satisfied and happy <br> with the results I provide.</p>
+        <p class="mt-4 text-sm">
+          Many clients are satisfied and happy <br />
+          with the results I provide.
+        </p>
       </div>
 
-      <div class="flex justify-end h-60">
-        <img src="/assets/images/me.png" alt=""
-             class="w-80 h-80 sm:-translate-y-20 sm:w-96 sm:h-96 lg:w-[500px] lg:h-[500px]" />
+      <div class="flex h-60 justify-end">
+        <img
+          src="/assets/images/me.png"
+          alt=""
+          class="h-80 w-80 sm:h-96 sm:w-96 sm:-translate-y-20 lg:h-[500px] lg:w-[500px] lg:-translate-y-40"
+        />
       </div>
     </div>
 
     <nav class="z-10 flex flex-col gap-4">
       @for (link of NAV_LINKS; track $index) {
-        <a [routerLink]="link.url" class="flex gap-4">
+        <a [routerLink]="link.url" class="flex items-end gap-4">
           <span
             class="text-xl font-semibold uppercase text-app-600"
             routerLinkActive="active"
@@ -74,11 +85,71 @@
             {{ link.ref | translate }}
           </span>
 
-          @if (link.icon) {
-            <lucide-angular [img]="link.icon" />
-          }
+          <span class="font-mono text-xs font-bold text-app-600">
+            (0{{ $index + 1 }})
+          </span>
         </a>
       }
     </nav>
-  </div>
+  </section>
 </div>
+
+<section class="bg-app-400">
+  <div class="mx-auto flex justify-center max-w-7xl gap-4 md:gap-8 px-4 py-10 lg:py-20">
+    @for (skill of SKILLS; track $index) {
+      <div class="flex items-center gap-4">
+        <img
+          [src]="skill.icon"
+          [alt]="skill.name"
+          class="saturate-0 transition-all duration-300 hover:saturate-100"
+        />
+      </div>
+    }
+  </div>
+</section>
+
+<section class="min-h-dvh bg-app-200">
+  <div class="mx-auto max-w-7xl px-4 py-10 lg:py-20">
+    <h2 class="title font-extrabold uppercase">
+      {{ 'HOME.S2.TITLE' | translate }}
+    </h2>
+
+    <div class="mt-10 flex flex-col md:flex-row lg:mt-20">
+      <div class="flex flex-1 flex-col gap-10 md:gap-20">
+        <div>
+          <div
+            class="mb-5 inline-flex gap-2 rounded-full bg-green-400 px-4 py-2 text-green-700"
+          >
+            <lucide-angular [img]="Icons.Braces" />
+            <h3 class="font-bold uppercase">
+              {{ 'HOME.S2.C1.TITLE' | translate }}
+            </h3>
+          </div>
+
+          <p class="text-app-600">
+            {{ 'HOME.S2.C1.DESCRIPTION' | translate }}
+          </p>
+        </div>
+
+        <div>
+          <div
+            class="mb-5 inline-flex gap-2 rounded-full bg-purple-400 px-4 py-2 text-purple-700"
+          >
+            <lucide-angular [img]="Icons.Palette" />
+            <h3 class="font-bold uppercase">
+              {{ 'HOME.S2.C2.TITLE' | translate }}
+            </h3>
+          </div>
+
+          <p class="text-app-600">
+            {{ 'HOME.S2.C2.DESCRIPTION' | translate }}
+          </p>
+        </div>
+      </div>
+
+      <div class="hidden flex-1 items-center justify-center p-5 md:flex">
+        <img src="/assets/images/figure.png" alt="" />
+      </div>
+    </div>
+  </div>
+</section>

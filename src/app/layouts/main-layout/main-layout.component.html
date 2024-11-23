@@ -1,4 +1,4 @@
-<header class="flex border-b z-30 bg-app-400 sticky top-0 border-app-500">
+<header class="sticky top-0 z-30 flex border-b border-app-500 bg-app-400">
   <button
     [cdkMenuTriggerFor]="navMenu"
     class="flex h-14 w-14 items-center justify-center bg-app-900 text-white"
@@ -12,9 +12,7 @@
       class="m-2 overflow-hidden rounded-lg border border-app-500 bg-app-200 shadow-lg"
     >
       @for (link of NAV_LINKS; track $index) {
-        <a
-          [routerLink]="link.url"
-          cdkMenuItem>
+        <a [routerLink]="link.url" cdkMenuItem>
           <div
             matRipple
             class="flex h-11 w-56 items-center justify-between px-4 hover:bg-app-400"
@@ -27,9 +25,9 @@
               {{ link.ref | translate }}
             </span>
 
-            @if (link.icon) {
-              <lucide-angular [img]="link.icon" class="my-icon" />
-            }
+            <span class="font-mono text-xs font-bold text-app-600">
+              (0{{ $index + 1 }})
+            </span>
           </div>
         </a>
 
@@ -41,7 +39,9 @@
   </ng-template>
 
   <div class="flex flex-grow items-center px-4">
-    <h1 class="text-sm font-bold uppercase text-app-900 lg:text-base">Sebastian</h1>
+    <h1 class="text-sm font-bold uppercase text-app-900 lg:text-base">
+      <a routerLink="/">Sebastian</a>
+    </h1>
   </div>
 
   <button
@@ -63,8 +63,11 @@
           (click)="changeLanguage(lang.code)"
           class="flex h-11 w-36 items-center gap-4 px-4 hover:bg-app-400"
         >
-          <img [src]="'/assets/icons/' + lang.icon" alt="">
-          <span class="font-bold uppercase text-app-600" [class.active]="currentLang() === lang.code">
+          <img [src]="'/assets/icons/' + lang.icon" alt="" />
+          <span
+            class="font-bold uppercase text-app-600"
+            [class.active]="currentLang() === lang.code"
+          >
             {{ lang.name | translate }}
           </span>
         </button>
@@ -87,4 +90,4 @@
   </a>
 </header>
 
-<router-outlet></router-outlet>
+<router-outlet />

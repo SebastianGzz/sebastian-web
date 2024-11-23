@@ -11,9 +11,22 @@
     "OPENINNEWTAB": "Abrir"
   },
   "HOME": {
-    "TITLE": "Sebastian",
-    "SUBTITLE": "Ingeniero de Software",
-    "SATISFIEDCLIENTS": "Clientes satisfechos"
+    "S1": {
+      "TITLE": "Sebastian",
+      "SUBTITLE": "Ingeniero de Software",
+      "SATISFIEDCLIENTS": "Clientes satisfechos"
+    },
+    "S2": {
+      "TITLE": "transformando ideas",
+      "C1": {
+        "TITLE": "desarrollo de software",
+        "DESCRIPTION": "Aprovecho las tecnologías web más avanzadas para dar vida a tus ideas, construyendo soluciones robustas, escalables y a medida."
+      },
+      "C2": {
+        "TITLE": "Diseño de interfaz (UX & UI)",
+        "DESCRIPTION": "Diseño interfaces que no sólo son visualmente atractivas, sino también fáciles de usar y optimizadas para ofrecer la mejor experiencia de usuario."
+      }
+    }
   },
   "PROJECTS": {
     "TITLE": "Proyectos",

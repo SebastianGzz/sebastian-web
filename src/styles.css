@@ -11,16 +11,20 @@ body {
   @apply bg-app-400 text-app-900;
 }
 
+/*Mofiicar el estilo de seleccion de texto*/
+::selection {
+  @apply bg-yellow-400/50;
+}
+
 .h-full-calc {
   height: calc(100dvh - 56px);
 }
 
 .title {
-  font-size: clamp(2rem, 14vw, 128px);
+  font-size: clamp(2rem, 10vw, 128px);
   line-height: 1;
 }
 
 .active {
   @apply text-app-900;
 }
-

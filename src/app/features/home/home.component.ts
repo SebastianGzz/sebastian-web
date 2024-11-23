@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
 import { TranslatePipe } from '../../core/pipes/translate.pipe';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { ArrowUpRight, LucideAngularModule, Star } from 'lucide-angular';
-import { NgClass } from '@angular/common';
+import {
+  Braces,
+  ArrowUpRight,
+  LucideAngularModule,
+  Star,
+  Palette,
+} from 'lucide-angular';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +19,32 @@ import { NgClass } from '@angular/common';
     RouterLinkActive,
     LucideAngularModule,
     NgClass,
+    NgOptimizedImage,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  readonly Icons = { ArrowUpRight, Star };
+  readonly Icons = { ArrowUpRight, Star, Palette, Braces };
+
+  readonly SKILLS = [
+    {
+      name: 'Angular',
+      icon: '/assets/images/angular.png',
+    },
+    {
+      name: 'React',
+      icon: '/assets/images/react.png',
+    },
+    {
+      name: 'Next.js',
+      icon: '/assets/images/next.png',
+    },
+    {
+      name: 'Tailwind CSS',
+      icon: '/assets/images/tailwind.png',
+    },
+  ];
 
   readonly NAV_LINKS = [
     { ref: 'HEADER.NAVLINKS.ABOUTME', url: '/', icon: null },

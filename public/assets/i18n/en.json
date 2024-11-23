@@ -11,9 +11,22 @@
     "OPENINNEWTAB": "Open in tab"
   },
   "HOME": {
-    "TITLE": "Sebastian",
-    "SUBTITLE": "Software Engineer",
-    "SATISFIEDCLIENTS": "Satisfied clients"
+    "S1": {
+      "TITLE": "Sebastian",
+      "SUBTITLE": "Software Engineer",
+      "SATISFIEDCLIENTS": "Satisfied clients"
+    },
+    "S2": {
+      "TITLE": "Transforming ideas",
+      "C1": {
+        "TITLE": "Software Development",
+        "DESCRIPTION": "I leverage cutting-edge web technologies to bring your ideas to life, building robust, scalable, and tailored solutions."
+      },
+      "C2": {
+        "TITLE": "Interface Design (UX & UI)",
+        "DESCRIPTION": "I leverage cutting-edge web technologies to bring your ideas to life, building robust, scalable, and tailored solutions."
+      }
+    }
   },
   "PROJECTS": {
     "TITLE": "Projects",
