@@ -1,6 +1,5 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-
 import {
   ArrowUpRight,
   Languages,
@@ -38,7 +37,7 @@ export class MainLayoutComponent {
   ];
 
   readonly NAV_LINKS = [
-    { ref: 'HEADER.NAVLINKS.HOME', url: '/', icon: null },
+    { ref: 'HEADER.NAVLINKS.ABOUTME', url: '/', icon: null },
     {
       ref: 'HEADER.NAVLINKS.PROJECTS',
       url: '/projects',

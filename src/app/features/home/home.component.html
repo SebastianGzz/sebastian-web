@@ -1,1 +1,84 @@
-<p>home works!</p>
+<div
+  class="mx-auto max-w-7xl border-x border-red-700 px-4 py-5"
+>
+  <div class="flex h-full flex-col justify-between">
+    <div>
+      <div class="w-full py-6">
+        <div class="relative w-fit">
+          <h1 class="title inline-block truncate break-words font-black uppercase">
+            {{ 'HOME.TITLE' | translate }}
+          </h1>
+
+          <div class="absolute -right-10 -top-5">
+            <svg
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24.0909 23.8182C26.4293 21.4798 30.4851 19.2348 32.9379 17.9941C33.7169 17.6001 33.7074 16.418 32.9248 16.0313C30.5032 14.8347 26.5217 12.6521 24.0909 10.1818C21.6808 7.73257 19.2995 3.50783 18.0022 1.01188C17.6025 0.242887 16.4389 0.262175 16.0616 1.04238C14.8509 3.54583 12.6099 7.75377 10.1818 10.1818C7.78021 12.5834 3.63727 14.8021 1.12478 16.0217C0.33272 16.4062 0.329195 17.6006 1.12 17.9876C3.6523 19.227 7.83931 21.4757 10.1818 23.8182C12.5558 26.1921 14.8334 30.4605 16.0617 32.9811C16.4399 33.7571 17.5948 33.7731 17.9924 33.0068C19.2985 30.4896 21.7088 26.2002 24.0909 23.8182Z"
+                fill="#030303"
+                stroke="#030303"
+                stroke-width="0.545455"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <h2
+          class="w-fit text-2xl font-semibold uppercase sm:text-3xl md:text-4xl"
+        >
+          {{ 'HOME.SUBTITLE' | translate }}
+        </h2>
+
+        <div class="flex mt-4">
+          @for (user of usuarios; track $index) {
+            <div
+              class="-mr-6 flex h-12 w-12 items-center justify-center rounded-full border-4 border-app-400 font-bold text-white"
+              [ngClass]="getColor($index)">
+              {{ user }}
+            </div>
+          }
+
+          <div class="ml-6 flex gap-2">
+            <div class="w-12 h-12 flex items-center justify-center border-4 border-app-400 bg-app-900 rounded-full">
+              <lucide-angular [img]="Icons.Star" class="text-app-200" />
+            </div>
+
+            <div class="flex flex-col justify-center">
+              <span class="font-bold leading-4">+200</span>
+              <span class="leading-4">{{ "HOME.SATISFIEDCLIENTS" | translate }}</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-sm mt-4">Many clients are satisfied and happy <br> with the results I provide.</p>
+      </div>
+
+      <div class="flex justify-end h-60">
+        <img src="/assets/images/me.png" alt=""
+             class="w-80 h-80 sm:-translate-y-20 sm:w-96 sm:h-96 lg:w-[500px] lg:h-[500px]" />
+      </div>
+    </div>
+
+    <nav class="z-10 flex flex-col gap-4">
+      @for (link of NAV_LINKS; track $index) {
+        <a [routerLink]="link.url" class="flex gap-4">
+          <span
+            class="text-xl font-semibold uppercase text-app-600"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            {{ link.ref | translate }}
+          </span>
+
+          @if (link.icon) {
+            <lucide-angular [img]="link.icon" />
+          }
+        </a>
+      }
+    </nav>
+  </div>
+</div>

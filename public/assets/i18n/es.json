@@ -1,11 +1,30 @@
 {
   "HEADER": {
-    "TITLE": "Sebastian",
-    "DESCRIPTION": "Ingeniero de Software",
     "NAVLINKS": {
-      "HOME": "Inicio",
+      "ABOUTME": "Sobre mi",
       "PROJECTS": "Proyectos",
       "CONTACTME": "Contactame"
+    }
+  },
+  "UTILS": {
+    "BACK": "Volver"
+  },
+  "HOME": {
+    "TITLE": "Sebastian",
+    "SUBTITLE": "Ingeniero de Software",
+    "SATISFIEDCLIENTS": "Clientes satisfechos"
+  },
+  "PROJECTS": {
+    "TITLE": "Proyectos",
+    "P1": {
+      "DATERANGE": "Ago 2024 - Ahora",
+      "TITLE": "Angular - Chat de comunicación interna",
+      "DESCRIPTION": "Trabajé en un equipo para crear un sistema de comunicación interna, que incluía un chat en tiempo real que conectaba los despachadores con los conductores para mejorar la coordinación y la eficiencia operativa."
+    },
+    "P2": {
+      "DATERANGE": "Sep 2022 - Nov 2022",
+      "TITLE": "React - Aplicación de ticketing",
+      "DESCRIPTION": "Desarrollé un sistema de compra de tickets que permitía la adquisición de tickets para eventos exclusivos. Para garantizar la seguridad y la únicidad de la transacción, implementé un sistema de identificadores únicos. Además, diseñé una función de seguimiento que logró registrar efectivamente todos los tickets vendidos, proporcionando un control detallado y análisis de ventas."
     }
   }
 }
