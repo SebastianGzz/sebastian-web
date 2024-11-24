@@ -5,6 +5,7 @@ import {
   Languages,
   LucideAngularModule,
   Menu,
+  ArrowUpFromDot,
 } from 'lucide-angular';
 import { TranslatePipe } from '../../core/pipes/translate.pipe';
 import { CdkMenu, CdkMenuItem, CdkMenuTrigger } from '@angular/cdk/menu';
@@ -29,7 +30,7 @@ import { TranslationService } from '../../core/services/translation.service';
   ],
 })
 export class MainLayoutComponent {
-  readonly Icons = { Menu, Languages, ArrowUpRight };
+  readonly Icons = { Menu, Languages, ArrowUpRight, ArrowUpFromDot };
 
   readonly LANGS = [
     { name: 'english', code: 'en', icon: 'flag-us.svg' },
@@ -60,5 +61,9 @@ export class MainLayoutComponent {
 
   changeLanguage(lang: string): void {
     this.translationService.changeLanguage(lang);
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

@@ -28,7 +28,7 @@ export class ProjectsComponent {
       dateRange: 'PROJECTS.P2.DATERANGE',
       title: 'PROJECTS.P2.TITLE',
       description: 'PROJECTS.P2.DESCRIPTION',
-      image: '/assets/images/angular-internal-chat.png',
+      image: '/assets/images/react-lottery-system.png',
     },
   ];
 }
