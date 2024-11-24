@@ -54,8 +54,8 @@
               <div class="flex flex-col justify-center">
                 <span class="text-lg font-bold leading-4">+13</span>
                 <span class="leading-4">
-                {{ 'HOME.S1.STATISTICS' | translate }}
-              </span>
+                  {{ 'HOME.S1.STATISTICS' | translate }}
+                </span>
               </div>
             </div>
           </div>
@@ -77,17 +77,17 @@
       <nav class="z-10 flex flex-col gap-4">
         @for (link of NAV_LINKS; track $index) {
           <a [routerLink]="link.url" class="flex w-fit items-end gap-4">
-          <span
-            class="text-xl font-bold uppercase text-app-600 lg:text-3xl"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            {{ link.ref | translate }}
-          </span>
+            <span
+              class="text-xl font-bold uppercase text-app-600 lg:text-3xl"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              {{ link.ref | translate }}
+            </span>
 
             <span class="font-mono text-sm font-bold text-app-600">
-            (0{{ $index + 1 }})
-          </span>
+              (0{{ $index + 1 }})
+            </span>
           </a>
         }
       </nav>
@@ -129,7 +129,7 @@
             </h3>
           </div>
 
-          <p class="text-app-600">
+          <p class="leading-8 text-app-600">
             {{ 'HOME.S2.C1.DESCRIPTION' | translate }}
           </p>
         </div>
@@ -144,7 +144,7 @@
             </h3>
           </div>
 
-          <p class="text-app-600">
+          <p class="leading-8 text-app-600">
             {{ 'HOME.S2.C2.DESCRIPTION' | translate }}
           </p>
         </div>
@@ -157,19 +157,20 @@
   </div>
 </section>
 
-<section class="bg-app-400 bg-grid">
+<section class="bg-grid bg-app-400">
   <div class="overflow-hidden py-5">
     <div class="-translate-x-20">
-      <span class="title font-extrabold uppercase"
-      >contact.contact.contact.contact</span
-      >
+      <span class="title font-extrabold uppercase">
+        contact.contact.contact.contact
+      </span>
     </div>
   </div>
 
-  <div class="mx-auto max-w-7xl flex items-center justify-center flex-col gap-4 px-4 py-10 md:gap-8 lg:py-20">
+  <div
+    class="mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 px-4 py-10 md:gap-8 lg:py-20"
+  >
     <p class="mb-4 text-center leading-8">
-      Convierte tus ideas en soluciones únicas y personalizadas. Tu proyecto
-      merece destacar con resultados de calidad que marquen la diferencia.
+      {{ 'HOME.S3.TEXT' | translate }}
     </p>
 
     <a

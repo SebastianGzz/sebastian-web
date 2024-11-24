@@ -4,6 +4,7 @@ import { TranslatePipe } from '../../core/pipes/translate.pipe';
 import {
   ArrowDownLeft,
   ExternalLink,
+  Mail,
   LucideAngularModule,
 } from 'lucide-angular';
 
@@ -15,7 +16,7 @@ import {
   styleUrl: './contact.component.css',
 })
 export class ContactComponent {
-  readonly Icons = { ArrowDownLeft, ExternalLink };
+  readonly Icons = { ArrowDownLeft, ExternalLink, Mail };
 
   readonly SOCIALS = [
     {

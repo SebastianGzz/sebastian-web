@@ -34,6 +34,22 @@
           </div>
         </a>
       }
+      <a href="mailto:sebastiangzzcor@outlook.com" target="_blank">
+        <div class="w-full rounded-lg border flex pr-5 items-center border-app-500 hover:bg-app-200">
+          <div class="flex h-14 w-14 items-center justify-center">
+            <lucide-angular [img]="Icons.Mail" size="20" />
+          </div>
+          <div class="flex-grow">
+            <span class="uppercase">Correo</span>
+          </div>
+          <div class="flex h-14 gap-2 items-center justify-center">
+              <span class="text-nowrap uppercase font-bold text-sm">
+                {{ 'UTILS.OPENINNEWTAB' | translate }}
+              </span>
+            <lucide-angular [img]="Icons.ExternalLink" size="16" />
+          </div>
+        </div>
+      </a>
     </div>
   </main>
 </div>
