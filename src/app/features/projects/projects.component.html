@@ -1,0 +1,44 @@
+<div class="mx-auto max-w-7xl px-4 py-5">
+  <header class="mb-10 lg:mb-20">
+    <h2 class="title inline-block truncate break-words font-black uppercase">
+      {{ 'PROJECTS.TITLE' | translate }}
+    </h2>
+
+    <a routerLink="/">
+      <div class="flex items-center gap-1">
+        <lucide-angular [img]="Icons.ArrowDownLeft" />
+        <span class="font-semibold uppercase underline">
+          {{ 'UTILS.BACK' | translate }}
+        </span>
+      </div>
+    </a>
+  </header>
+
+  <div class="mx-auto max-w-3xl">
+    @for (project of PROJECTS; track $index) {
+      <div class="mx-auto flex max-w-3xl flex-col sm:flex-row">
+        <div class="w-60 flex-shrink-0">
+          <div class="flex items-center gap-2">
+            <lucide-angular [img]="Icons.CalendarDays" size="16" />
+            <span>{{ project.dateRange | translate }}</span>
+          </div>
+        </div>
+        <div class="flex min-w-80 flex-col gap-4">
+          <h3 class="text-xl font-bold text-app-900">
+            {{ project.title | translate }}
+          </h3>
+          <p class="text-app-600">{{ project.description | translate }}</p>
+          <img
+            class="rounded-lg border border-app-500 saturate-0 transition-all duration-300 hover:saturate-100"
+            [src]="project.image"
+            alt=""
+          />
+        </div>
+      </div>
+
+      @if ($index < PROJECTS.length - 1) {
+        <div class="my-10 border-t border-app-500"></div>
+      }
+    }
+  </div>
+</div>

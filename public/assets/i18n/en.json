@@ -1,0 +1,51 @@
+{
+  "HEADER": {
+    "NAVLINKS": {
+      "ABOUTME": "About me",
+      "PROJECTS": "Projects",
+      "CONTACTME": "Contact Me"
+    }
+  },
+  "UTILS": {
+    "BACK": "Back",
+    "OPENINNEWTAB": "Open in tab"
+  },
+  "HOME": {
+    "S1": {
+      "TITLE": "Sebastian",
+      "SUBTITLE": "Software Engineer",
+      "STATISTICS": "Delivered projects",
+      "SATISFIEDCLIENTS": "Many clients are satisfied and happy with the results I provide."
+    },
+    "S2": {
+      "TITLE": "Transforming ideas",
+      "C1": {
+        "TITLE": "Software Development",
+        "DESCRIPTION": "I leverage cutting-edge web technologies to bring your ideas to life, building robust, scalable, and tailored solutions."
+      },
+      "C2": {
+        "TITLE": "Interface Design (UX & UI)",
+        "DESCRIPTION": "I leverage cutting-edge web technologies to bring your ideas to life, building robust, scalable, and tailored solutions."
+      }
+    },
+    "S3": {
+      "TEXT": "Turn your ideas into unique and customised solutions. Your project deserves to stand out with quality results that make a difference."
+    }
+  },
+  "PROJECTS": {
+    "TITLE": "Projects",
+    "P1": {
+      "DATERANGE": "Ago 2024 - Now",
+      "TITLE": "Angular - Internal chat",
+      "DESCRIPTION": "I worked in a team to create an internal communication platform, which included a real-time chat system that connected dispatchers with truck drivers to improve coordination and operational efficiency."
+    },
+    "P2": {
+      "DATERANGE": "Sep 2022 - Nov 2022",
+      "TITLE": "React - Ticketing application",
+      "DESCRIPTION": "Developed a ticket purchasing system enabling the acquisition of tickets for exclusive events. To ensure security and transaction uniqueness, I implemented a system of unique identifiers. Additionally, I designed a tracking feature that effectively logged all tickets sold, providing detailed control and analysis of sales."
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contact"
+  }
+}
