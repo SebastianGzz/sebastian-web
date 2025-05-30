@@ -1,0 +1,51 @@
+{
+  "HEADER": {
+    "NAVLINKS": {
+      "ABOUTME": "Sobre mi",
+      "PROJECTS": "Proyectos",
+      "CONTACTME": "Contactame"
+    }
+  },
+  "UTILS": {
+    "BACK": "Volver",
+    "OPENINNEWTAB": "Abrir"
+  },
+  "HOME": {
+    "S1": {
+      "TITLE": "Sebastian",
+      "SUBTITLE": "Ingeniero de Software",
+      "STATISTICS": "Proyectos entregados",
+      "SATISFIEDCLIENTS": "Muchos clientes están satisfechos y felices con los resultados que proporciono."
+    },
+    "S2": {
+      "TITLE": "transformando ideas",
+      "C1": {
+        "TITLE": "desarrollo de software",
+        "DESCRIPTION": "Aprovecho las tecnologías web más avanzadas para dar vida a tus ideas, construyendo soluciones robustas, escalables y a medida."
+      },
+      "C2": {
+        "TITLE": "Diseño de interfaz (UX & UI)",
+        "DESCRIPTION": "Diseño interfaces que no sólo son visualmente atractivas, sino también fáciles de usar y optimizadas para ofrecer la mejor experiencia de usuario."
+      }
+    },
+    "S3": {
+      "TEXT": "Convierte tus ideas en soluciones únicas y personalizadas. Tu proyecto merece destacar con resultados de calidad que marquen la diferencia."
+    }
+  },
+  "PROJECTS": {
+    "TITLE": "Proyectos",
+    "P1": {
+      "DATERANGE": "Ago 2024 - Ahora",
+      "TITLE": "Angular - Chat de comunicación interna",
+      "DESCRIPTION": "Trabajé en un equipo para crear un sistema de comunicación interna, que incluía un chat en tiempo real que conectaba los despachadores con los conductores para mejorar la coordinación y la eficiencia operativa."
+    },
+    "P2": {
+      "DATERANGE": "Sep 2022 - Nov 2022",
+      "TITLE": "React - Aplicación de ticketing",
+      "DESCRIPTION": "Desarrollé un sistema de compra de tickets que permitía la adquisición de tickets para eventos exclusivos. Para garantizar la seguridad y la únicidad de la transacción, implementé un sistema de identificadores únicos. Además, diseñé una función de seguimiento que logró registrar efectivamente todos los tickets vendidos, proporcionando un control detallado y análisis de ventas."
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contacto"
+  }
+}
